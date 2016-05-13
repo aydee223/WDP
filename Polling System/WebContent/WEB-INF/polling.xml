@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<polling>
+	<user>
+		<username>rod</username>
+		<fullName>rosa rod</fullName>
+		<password>123</password>
+			<meeting>
+				<meetingID>1</meetingID>
+				<pollTitle>pollTitle1</pollTitle>
+				<creationDate>Tue 02-Feb-2016 11:00</creationDate>
+				<meetingLocation>Lee St, Kiama Rm</meetingLocation>
+				<meetingDescription>Project Disc</meetingDescription>
+				<status>open</status>
+				
+				<meetingDateTime>
+					<meetingDateTimeID>1</meetingDateTimeID>
+					<meetingDateTime>Mon 02-May-2016 11:00</meetingDateTime>
+					<votes>0</votes>
+				</meetingDateTime>
+				<meetingDateTime>
+					<meetingDateTimeID>2</meetingDateTimeID>
+					<meetingDateTime>Tue 03-May-2016 09:00</meetingDateTime>
+					<votes>3</votes>
+				</meetingDateTime>
+				<meetingDateTime>
+					<meetingDateTimeID>3</meetingDateTimeID>
+					<meetingDateTime>Wed 04-May-2016 13:00</meetingDateTime>
+					<votes>0</votes>
+				</meetingDateTime>
+				
+			</meeting>
+	</user>
+
+</polling>
