@@ -17,4 +17,31 @@ public class MeetingDateTime implements Serializable{
 	@XmlElement(name = "votes")
 	private String votes;
 	
+	public MeetingDateTime(){
+		super();
+	}
+	
+	public MeetingDateTime(String meetingDateTimeId, String meetingDateTime) {
+		this.meetingDateTimeID = meetingDateTimeId;
+		this.meetingDateTime = meetingDateTime;
+		this.votes = "0";
+	}
+	
+	public String getId() {
+		// TODO Auto-generated method stub
+		return meetingDateTimeID;
+	}
+	public String getMeetingDateTime(){
+		return meetingDateTime;
+	}
+	
+	public String getVotes(){
+		return votes;
+	}
+	public void vote() {
+		// TODO Auto-generated method stub
+		votes = String.valueOf(Integer.parseInt(votes)+1);
+		
+	}
+	
 }

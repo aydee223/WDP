@@ -20,6 +20,10 @@
 		for(User u: polSysApp.getUsers()){
 			out.println("name " + u.getUserName());
 		}
+		
+		polSysApp.voteOnPoll("1", "1");
+		out.println("vote = " + polSysApp.getMeetingDateTime("1", "1").getVotes());
+		
 	%>
 	asdf
 </body>

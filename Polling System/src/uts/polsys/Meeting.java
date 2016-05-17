@@ -13,25 +13,6 @@ import javax.xml.bind.annotation.XmlElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Meeting implements Serializable{
 
-	public Meeting(){
-		super();
-	}
-	
-	public Meeting(String id, String pollTitle, String meetingLocation, String meetingDescription) {
-		// TODO Auto-generated constructor stub
-		super();
-		this.meetingID = id; //This should be auto generated
-		this.pollTitle = pollTitle;
-		
-		DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
-		Date dateobj = new Date();
-		this.creationDate = df.format(dateobj);
-		
-		this.meetingLocation = meetingLocation;
-		this.meetingDescription = meetingDescription;
-		this.status = "open";
-	}
-
 	private static final long serialVersionUID = -2214715033634951514L;
 
 	@XmlElement(name = "meetingID")
@@ -50,9 +31,46 @@ public class Meeting implements Serializable{
 	@XmlElement(name = "meetingDateTime")
 	private ArrayList<MeetingDateTime> meetingDateTimes = new ArrayList<MeetingDateTime>();
 
+	
+	public Meeting(){
+		super();
+	}
+	
+	public Meeting(String id, String pollTitle, String meetingLocation, String meetingDescription) {
+		// TODO Auto-generated constructor stub
+		super();
+		this.meetingID = id; //This should be auto generated
+		this.pollTitle = pollTitle;
+		
+		DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+		Date dateobj = new Date();
+		this.creationDate = df.format(dateobj);
+		
+		this.meetingLocation = meetingLocation;
+		this.meetingDescription = meetingDescription;
+		this.status = "open";
+	}
+	
+	
 	public Object getId() {
 		// TODO Auto-generated method stub
 		return meetingID;
+	}
+	public String getStatus() {
+		// TODO Auto-generated method stub
+		return this.status;
+	}
+	public String getPollTitle(){
+		return pollTitle;
+	}
+	public String getCreationDate(){
+		return creationDate;
+	}
+	public String getMeetingLocation(){
+		return meetingLocation;
+	}
+	public String getMeetingDescription(){
+		return meetingDescription;
 	}
 
 	public void closePoll() {
@@ -61,8 +79,13 @@ public class Meeting implements Serializable{
 		
 	}
 
-	public String getStatus() {
+	public ArrayList<MeetingDateTime> getMeetingDateTimes() {
 		// TODO Auto-generated method stub
-		return this.status;
+		return meetingDateTimes;
+	}
+
+	public void createMeetingDateTime(String meetingDateTimeId, String meetingDateTime) {
+		meetingDateTimes.add(new MeetingDateTime(meetingDateTimeId, meetingDateTime));
+		
 	}
 }
