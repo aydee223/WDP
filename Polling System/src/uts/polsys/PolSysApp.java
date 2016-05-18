@@ -127,11 +127,12 @@ public class PolSysApp implements Serializable {
 		return null;
 	}
 	
-	public void voteOnPoll(String pollId, String meetingDateTimeID) throws JAXBException, IOException{
+	public void voteOnPoll(String pollId, String meetingDateTimeID, String voterName) throws JAXBException, IOException{
 		MeetingDateTime mdt = getMeetingDateTime(pollId, meetingDateTimeID);
 		if(mdt != null){
-			mdt.vote();
-			System.out.println("called");
+			//mdt.vote(sessionUser.getUserId());
+			//voter does not have to be logged in to vote, voter name is supplied in form
+			mdt.vote(voterName);
 			
 		}
 		saveData();

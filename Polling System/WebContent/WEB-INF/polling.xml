@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <polling>
 	<user>
+		<userid>1</userid>
 		<username>rod</username>
 		<fullName>rosa rod</fullName>
 		<password>123</password>
@@ -15,17 +16,26 @@
 				<meetingDateTime>
 					<meetingDateTimeID>1</meetingDateTimeID>
 					<meetingDateTime>Mon 02-May-2016 11:00</meetingDateTime>
-					<votes>0</votes>
+					<vote>
+						<votername>Sherrel</votername>
+					</vote>
+					<vote>	
+						<votername>Marrel</votername>
+					</vote>
+					<vote>
+						<votername>Carrel</votername>
+					</vote>
 				</meetingDateTime>
 				<meetingDateTime>
 					<meetingDateTimeID>2</meetingDateTimeID>
 					<meetingDateTime>Tue 03-May-2016 09:00</meetingDateTime>
-					<votes>3</votes>
+					<vote>
+						<votername>Crystal</votername>
+					</vote>
 				</meetingDateTime>
 				<meetingDateTime>
 					<meetingDateTimeID>3</meetingDateTimeID>
 					<meetingDateTime>Wed 04-May-2016 13:00</meetingDateTime>
-					<votes>0</votes>
 				</meetingDateTime>
 				
 			</meeting>
