@@ -11,7 +11,7 @@
 	<% String filePath = application.getRealPath("WEB-INF/polling.xml"); %>
 	<jsp:useBean id="polSysApp" class="uts.polsys.PolSysApp" scope="application">
 		    <jsp:setProperty name="polSysApp" property="filePath" value="<%=filePath%>"/>
-	</jsp:useBean>
+	</jsp:useBean> 
 	
 	<%
 		polSysApp.setFilePath(filePath);

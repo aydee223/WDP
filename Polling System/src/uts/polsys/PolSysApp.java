@@ -80,16 +80,34 @@ public class PolSysApp implements Serializable {
 	//creates a list of all open Polls (meeting object)
 	//you will use this for selecting which poll to vote on
 	public ArrayList<Meeting> getAllOpenPolls(){
-		ArrayList<Meeting> allOpenPolls = new ArrayList<Meeting>();
-		//nested for loop as we want all of the open polls for all of the users
+		return getPollsByStatus("open");
+	}
+	
+	public ArrayList<Meeting> getAllClosedPolls(){
+		return getPollsByStatus("closed");
+	}
+	
+	public ArrayList<Meeting> getPollsByStatus(String status){
+		ArrayList<Meeting> polls = new ArrayList<Meeting>();
 		for(User u : polling.getUsers()){
 			for(Meeting m : u.getPolls()){
-				if(m.getStatus().equals("open")){
-					allOpenPolls.add(m);
+				if(m.getStatus().equals(status)){
+					polls.add(m);
 				}
 			}
 		}
-		return allOpenPolls;
+		return polls;
+	}
+	
+	//creates a list of all Polls (meeting object)
+	public ArrayList<Meeting> getAllPolls() {
+		ArrayList<Meeting> allPolls = new ArrayList<Meeting>();
+		for(User u : polling.getUsers()){
+			for(Meeting m : u.getPolls()){
+				allPolls.add(m);
+			}
+		}
+		return allPolls;
 	}
 	
 	//return specified poll(meeting object)
@@ -143,8 +161,26 @@ public class PolSysApp implements Serializable {
 		return sessionUser.getPolls();
 	}
 	
+	//get all the polls by a user
+	public ArrayList<Meeting> getPollsByUser(String userid){
+
+		for(User u : polling.getUsers()){
+			//System.out.println(u.getUserId() + "and " + userid);
+			if(u.getUserId().equals(userid)){
+				return u.getPolls();
+			}
+		}
+		return null;
+	}
 	
 	public String getFilePath() {
 		return filePath;
 	}
+
+	public Polling getPolling() {
+		// TODO Auto-generated method stub
+		return this.polling;
+	}
+
+
 }
