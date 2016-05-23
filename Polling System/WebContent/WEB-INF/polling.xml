@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- polling xmlns="http://www.uts.edu.au/31284/wsd-polling"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-polling polling.xsd" -->
+
 <polling>
 	<user>
-		<userid>1</userid>
+		<userId>1</userId>
 		<username>rod</username>
 		<fullName>rosa rod</fullName>
 		<password>123</password>
-			
-				<meeting>
-					<meetingID>1</meetingID>
-					<pollTitle>pollTitle1</pollTitle>
-					<creationDate>Tue 02-Feb-2016 11:00</creationDate>
-					<meetingLocation>Lee St, Kiama Rm</meetingLocation>
-					<meetingDescription>Project Disc</meetingDescription>
-					<status>open</status>
-					
-					<meetingDateTime>
-						<meetingDateTimeID>1</meetingDateTimeID>
-						<meetingDateTime>Mon 02-May-2016 11:00</meetingDateTime>
-						<vote>
-							<votername>Sherrel</votername>
-						</vote>
-						<vote>	
-							<votername>Marrel</votername>
-						</vote>
-						<vote>
-							<votername>Carrel</votername>
-						</vote>
-					</meetingDateTime>
-					<meetingDateTime>
-						<meetingDateTimeID>2</meetingDateTimeID>
-						<meetingDateTime>Tue 03-May-2016 09:00</meetingDateTime>
-						<vote>
-							<votername>Crystal</votername>
-						</vote>
-					</meetingDateTime>
-					<meetingDateTime>
-						<meetingDateTimeID>3</meetingDateTimeID>
-						<meetingDateTime>Wed 04-May-2016 13:00</meetingDateTime>
-					</meetingDateTime>
-					
-				</meeting>
-			
+		<meeting>
+				<meetingID>1</meetingID>
+				<pollTitle>pollTitle1</pollTitle>
+				<creationDate>2016-02-02T11:00:00</creationDate>
+				<meetingLocation>Lee St, Kiama Rm</meetingLocation>
+				<meetingDescription>Project Disc</meetingDescription>
+				<status>open</status>				
+				<meetingDateTime>
+					<meetingDateTimeID>1</meetingDateTimeID>
+					<meetingDateTime>2016-05-02T11:00:00</meetingDateTime>
+					<vote>
+						<voterName>Sherrel</voterName>
+					</vote>
+					<vote>	
+						<voterName>Marrel</voterName>
+					</vote>
+					<vote>
+						<voterName>Carrel</voterName>
+					</vote>
+				</meetingDateTime>
+				<meetingDateTime>
+					<meetingDateTimeID>2</meetingDateTimeID>
+					<meetingDateTime>2016-05-03T09:00:00</meetingDateTime>
+					<vote>
+						<voterName>Crystal</voterName>
+					</vote>
+				</meetingDateTime>
+				<meetingDateTime>
+					<meetingDateTimeID>3</meetingDateTimeID>
+					<meetingDateTime>2016-05-04T13:00:00</meetingDateTime>
+				</meetingDateTime>
+		</meeting>
 	</user>
-
 </polling>

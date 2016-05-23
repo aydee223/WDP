@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema
+ xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="http://www.uts.edu.au/31284/wsd-polling"
+ xmlns="http://www.uts.edu.au/31284/wsd-polling"
+ elementFormDefault="qualified">
+
+
+<!-- Insert your type declarations here -->
+ 
+<xs:simpleType name="dateTime">
+  <xs:restriction base="xs:dateTime">
+    <xs:pattern value="\d{1,4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}"/> <!-- 2016-02-02T11:30:00 -->
+  </xs:restriction>
+</xs:simpleType>
+
+
+
+
+<!-- Insert your element declarations here -->
+
+<xs:element name="polling">
+  <xs:complexType>
+    <xs:sequence>
+
+      <xs:element name="user" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+          
+            <xs:element name="userId" type="xs:positiveInteger"/>
+            <xs:element name="username" type="xs:string"/>
+            <xs:element name="fullName" type="xs:string"/>
+            <xs:element name="password" type="xs:string"/>               
+            <xs:element name="meeting" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                      
+                  <xs:element name="meetingID" type="xs:positiveInteger"/>
+                  <xs:element name="pollTitle" type="xs:string"/>
+                  <xs:element name="creationDate" type="dateTime"/>
+                  <xs:element name="meetingLocation" type="xs:string"/>
+                  <xs:element name="meetingDescription" type="xs:string"/>
+                  <xs:element name="status" type="xs:string"/>
+                  <xs:element name="meetingDateTime" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <xs:sequence>
+                            
+                        <xs:element name="meetingDateTimeID" type="xs:positiveInteger"/>
+                        <xs:element name="meetingDateTime" type="dateTime"/>
+                        <xs:element name="vote" minOccurs="0" maxOccurs="unbounded">
+                          <xs:complexType>
+                            <xs:sequence>
+                            
+                              <xs:element name="voterName" minOccurs="0" maxOccurs="unbounded"/>
+                              
+                            </xs:sequence>
+                          </xs:complexType>
+                        </xs:element>
+
+                      </xs:sequence>
+                    </xs:complexType>
+
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+        
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+                
+</xs:element>
+</xs:schema>
