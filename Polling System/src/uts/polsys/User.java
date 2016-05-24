@@ -10,8 +10,8 @@ public class User implements Serializable{
 
 	private static final long serialVersionUID = 20046908560066955L;
 	
-	@XmlElement(name = "userid")
-	private String userid;
+	@XmlElement(name = "userId")
+	private String userId;
 	@XmlElement(name = "username")
 	private String username;
 	@XmlElement(name = "fullName")
@@ -55,7 +55,7 @@ public class User implements Serializable{
 
 	public String getUserId() {
 		// TODO Auto-generated method stub
-		return userid;
+		return userId;
 	}
 	
 	
