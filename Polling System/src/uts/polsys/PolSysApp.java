@@ -55,9 +55,14 @@ public class PolSysApp implements Serializable {
 			if(user.getUserName().equals(username) &&
 					user.getPassword().equals(password)){
 				sessionUser = user;
+				//added by rosa
+				return sessionUser.toString();
 			}
 		}
-		return sessionUser.getUserName();
+		//return sessionUser.getUserName();
+		//edited by rosa
+		return null; // incorrect login
+
 		
 	}
 	// for task create a new poll
