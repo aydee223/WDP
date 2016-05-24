@@ -9,19 +9,19 @@ import javax.xml.bind.annotation.XmlElement;
 public class Vote implements Serializable{
 
 	private static final long serialVersionUID = 4875187255743049819L;
-	@XmlElement(name = "votername")
-	private String votername;
+	@XmlElement(name = "voterName")
+	private String voterName;
 	
 	public Vote(){
 		super();
 	}
 	
-	public Vote(String votername){
-		this.votername = votername;
+	public Vote(String voterName){
+		this.voterName = voterName;
 	}
 	
 	public String getUserId(){
-		return votername;
+		return voterName;
 	}
 	
 
