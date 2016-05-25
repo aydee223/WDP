@@ -37,23 +37,27 @@ meetingDateTime *** multiple selections
 %>	
 
 
+<p><% System.out.println("session = " + session); %></p>
+
 <%
 String username = request.getParameter("username");
 String password = request.getParameter("password");
 
-String users = polSysApp.login(username, password); //Users users = diaryApp.getUsers();
-//User user = users.login(email, password);
+Polling users = polSysApp.getPolling();
+User user = users.login(username, password);
 
-
-
+//System.out.println("username = " + username + " | password = " + password + " | userId = " + user.getUserId());
 System.out.println("users = " + users);
+System.out.println("user = " + user);
 
-if (users != null) { //if (user != null) { // the login was successful
-	polSysApp.getSessionUsersPolls(); //session.setAttribute("user", user);
+
+if (user != null) { // the login was successful
+	session.setAttribute("user", user);
 
 %>
 
 <div style="text-align: right">
+
   <a href="main.jsp">Polls - Open</a> | 
   <a href="pollsCreateNew.jsp">Polls - Create New</a> | 
   <a href="pollsModify.jsp">Polls - Modify</a> | 
@@ -92,13 +96,12 @@ if (users != null) { //if (user != null) { // the login was successful
   </tr>
 </table>
 
-</form>
-
-
 <% } else { %>
 	<p>Incorrect username/password.</p>
 	<p>Click <a href="login.jsp">here</a> to try again.</p>
 <% } %>
+
+</form>
 
 </body>
 </html>
