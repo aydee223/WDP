@@ -21,6 +21,8 @@
 
 
 <div style="text-align: right">
+  <p><% System.out.println("session = " + session); %></p>
+
   <a href="main.jsp">Polls - Open</a> | 
   <a href="pollsSummary.jsp">Polls - Summary</a> | 
   <a href="pollsCreateNew.jsp">Polls - Create New</a> | 
@@ -45,8 +47,8 @@ Create > pollsSummary.jsp
 
 <form action="pollsSummary.jsp" method="POST">
 <table>
-  <tr><td>FullName</td><td><input name="fullName" type="text"></td></tr>
   <tr><td>Username</td><td><input name="username" type="text"></td></tr>
+  <tr><td>FullName</td><td><input name="fullName" type="text"></td></tr>
   <tr><td>Password</td><td><input name="password" type="password"></td></tr>
   <tr><td></td><td><input value="Create" type="submit"></td></tr>
 </table>
