@@ -11,10 +11,11 @@
 <body>
 
 <div style="text-align: right">
+  <p><% System.out.println("session = " + session); %></p>
+
   <a href="main.jsp">Polls - Open</a> | 
   <a href="pollsSummary.jsp">Polls - Summary</a> | 
-  <a href="userCreateNew.jsp">User - Create New</a> | 
-  <a href="logout.jsp">Logout</a>
+  <a href="userCreateNew.jsp">User - Create New</a>
 </div>
 
 <h1>Login - Creator</h1>
