@@ -21,6 +21,8 @@
 
 
 <div style="text-align: right">
+  <p><% System.out.println("session = " + session); %></p>
+
   <a href="pollsSummary.jsp">Polls - Summary</a> | 
   <a href="pollsCreateNew.jsp">Polls - Create New</a> | 
   <a href="pollsModify.jsp">Polls - Modify</a> | 
@@ -40,6 +42,7 @@ username (hidden)
 
 */
 %>	
+
 
 <form>
 <table border="1">
