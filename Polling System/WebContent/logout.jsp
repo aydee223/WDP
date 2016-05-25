@@ -8,14 +8,19 @@
 </head>
 <body>
 
+<% session.invalidate(); %>
+
 <div style="text-align: right">
+  <p><% System.out.println("session = " + session); %></p>
+
   <a href="main.jsp">Polls - Open</a> | 
   <a href="pollsSummary.jsp">Polls - Summary</a> | 
   <a href="login.jsp">Login</a> | 
 </div>
 
 
-<% session.invalidate(); %>
+
+
 <p>You have been logged out.</p>
 </body>
 </html>
