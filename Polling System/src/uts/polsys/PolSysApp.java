@@ -49,22 +49,26 @@ public class PolSysApp implements Serializable {
 		return polling.getUsers();
 	}
 	
+	
+/*	//commented by rosa
 	//for task login and logout
-	public String login(String username, String password){
+	//public String login(String username, String password){
+	//added by rosa
+	public User login(String username, String password){
 		for(User user : polling.getUsers()){
 			if(user.getUserName().equals(username) &&
 					user.getPassword().equals(password)){
 				sessionUser = user;
 				//added by rosa
-				return sessionUser.toString();
+				return sessionUser;
 			}
 		}
 		//return sessionUser.getUserName();
-		//edited by rosa
-		return null; // incorrect login
-
-		
+		//added by rosa
+		return null;
 	}
+*/
+	
 	// for task create a new poll
 	public void createNewPoll(String id, String pollTitle, String meetingLocation, String meetingDescription) throws JAXBException, IOException{
 		sessionUser.createNewPoll(id, pollTitle, meetingLocation, meetingDescription);
