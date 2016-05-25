@@ -18,24 +18,59 @@ public class User implements Serializable{
 	private String fullName;
 	@XmlElement(name = "password")
 	private String password;
-	
+
+	// added by rosa
+	public User() {
+		super();
+	}
+	// added by rosa
+	public User(String userId, String username, String fullName, String password) {
+		super();
+		this.userId = userId;
+		this.username = username;
+		this.fullName = fullName;
+		this.password = password;
+	}
+
 	@XmlElement(name = "meeting")
 	private ArrayList<Meeting> meetings = new ArrayList<Meeting>();
-	
+
+	public String getUserId() {
+		return userId;
+	}
+	//added by rosa
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 	public String getUserName(){
 		return username;
 	}
-	
+	//added by rosa
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	//added by rosa
+	public String getFullName() {
+		return fullName;
+	}
+	//added by rosa
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
 	public String getPassword(){
 		return password;
 	}
+	//added by rosa
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 
 	public void createNewPoll(String id, String pollTitle, String meetingLocation, String meetingDescription) {
 		// TODO Auto-generated method stub
 		meetings.add(new Meeting(id, pollTitle, meetingLocation, meetingDescription));
 		
 	}
-
 
 	public boolean closePoll(String pollId) {
 		// TODO Auto-generated method stub
@@ -46,17 +81,12 @@ public class User implements Serializable{
 			}
 		}
 		return false;
-		
 	}
 
 	public ArrayList<Meeting> getPolls() {
 		return this.meetings;
 	}
 
-	public String getUserId() {
-		// TODO Auto-generated method stub
-		return userId;
-	}
 	
 	
 }
